@@ -13,6 +13,7 @@
   function isHttp(u) { try { var x = new URL(u); return x.protocol === 'https:' || x.protocol === 'http:'; } catch (e) { return false; } }
   function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
   var reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+  if (reduce) { var fv = document.getElementById('finaleVideo'); if (fv) fv.pause(); }
 
   root.lang = 'es';
   root.classList.add('js', 'locked');

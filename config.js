@@ -12,11 +12,11 @@ window.INVITACION = {
   evento: {
     // Fecha y hora reales con su desfase horario. Colombia = -05:00.
     // Formato: AAAA-MM-DDTHH:MM:SS-05:00
-    fechaISO: "2026-11-21T17:00:00-07:00",    // provisional (tomada de la referencia)
+    fechaISO: "2026-11-21T19:00:00-05:00",
     zonaHoraria: "America/Bogota",
     lugar: {
-      nombre: "Finca Las Delicias",             // pendiente
-      direccion: "Dirección completa del evento", // pendiente
+      nombre: "Finca Las Delicias",
+      direccion: "Vereda Santa Ana",
       mapsUrl: "https://maps.app.goo.gl/jzsDFU9wkQWTsVcT6"                             // enlace de Google Maps. Vacío = botón desactivado
     }
   },
@@ -33,13 +33,13 @@ window.INVITACION = {
 
   // --- Mensajes (provisionales, editables) ---------------------------------
   mensajeCorazon: "Una noche mágica te espera. Eres parte de mi historia y quiero compartirla contigo.",
-  invitacion: "Con la bendición de Dios y el amor que mis padres me han dado, me siento feliz de llegar a este momento de mi vida, el día que dejaré atrás mi infancia y comenzaré un nuevo viaje con muchas metas que cumplir.",
+  invitacion: "Hay momentos en la vida que se guardan para siempre en el corazón… y hoy queremos compartir uno de ellos con ustedes. ✨ Isabela celebra sus 15 años, una etapa que comienza llena de sueños, ilusiones y nuevas historias por vivir. Nos encantaría contar con su presencia para hacer de esta noche un recuerdo inolvidable.",
   presentacion: "Una noche mágica se acerca, llena de sueños, alegría y un nuevo capítulo por comenzar: una niña deja atrás su niñez para convertirse en una joven llena de sueños.",
   mensajePrincipal: "La magia de cumplir 15 años no estaría completa sin personas como tú. ¡Espero verte en mi celebración!",
 
   vestuario: {
-    codigo: "Vestimenta elegante",
-    nota: "Se reserva el color morado y lila. ¡Dejémosle esos tonos a la quinceañera!"
+    codigo: "Semi formal",
+    nota: "Se reserva el color lila, en todas sus tonalidades, para la quinceañera."
   },
 
   dedicatoria: {

@@ -32,14 +32,6 @@
         <span class="hint">Tocar el sobre</span>
       </button>
 
-      <div class="cover-lotus" aria-hidden="true">
-        <svg viewBox="0 0 120 160">
-          <path d="M60 150C64 120 52 100 62 72" fill="none" stroke="#5f8a4c" stroke-width="4" stroke-linecap="round"/>
-          <g transform="translate(62 128) rotate(-40) scale(1.1)"><use href="#leafg"/></g>
-          <g transform="translate(62 108) rotate(-150) scale(.9)"><use href="#leafg"/></g>
-          <use href="#lotus" x="0" y="12" width="120" height="100"/>
-        </svg>
-      </div>
     </div>
     <div class="flash" aria-hidden="true"></div>
   </section>
@@ -64,7 +56,7 @@
     </section>
 
     <!-- =================== 3-4. REPRODUCTOR Y CUENTA REGRESIVA =================== -->
-    <section class="sec player parch" id="reproductor" data-corners aria-label="Música y cuenta regresiva">
+    <section class="sec player parch" id="reproductor" data-corners data-torn="tb" aria-label="Música y cuenta regresiva">
       <div class="player-card rv" id="playerCard">
         <div class="wave" id="wave" aria-hidden="true"></div>
         <input type="range" class="seek" id="seek" min="0" max="100" step="0.1" value="0" aria-label="Progreso de la música" disabled>
@@ -103,7 +95,7 @@
     </section>
 
     <!-- =================== 5. MENSAJE DE INVITACIÓN =================== -->
-    <section class="sec msg parch" id="invitacion" data-corners>
+    <section class="sec msg parch" id="invitacion" data-corners data-torn="tb">
       <i class="ln a"></i><i class="ln b"></i><i class="bf"></i>
       <svg class="sun rv" viewBox="0 0 100 100" aria-hidden="true"><use href="#sunstar"/></svg>
       <p class="lead rv" id="invMsg" style="--d:.1s"></p>
@@ -111,11 +103,15 @@
     </section>
 
     <!-- =================== 6. PRESENTACIÓN DE LA QUINCEAÑERA =================== -->
-    <section class="sec wreath-sec parch" id="presentacion" data-corners>
+    <section class="sec wreath-sec parch" id="presentacion" data-corners data-torn="tb">
       <i class="ln a"></i><i class="ln b"></i>
       <div class="wreath rv punch" id="wreath">
         <img class="wreath-img" src="assets/corona_nombre.png" alt="">
         <p class="name" data-bind="quinceanera">Danna</p>
+        <i class="sp" style="--w:11px;left:20%;top:40%;--d:.4s"></i>
+        <i class="sp" style="--w:9px;right:18%;top:48%;--d:1.2s"></i>
+        <i class="sp" style="--w:8px;left:32%;top:62%;--d:.8s"></i>
+        <i class="sp" style="--w:10px;right:28%;top:60%;--d:.2s"></i>
       </div>
       <p class="pres rv" id="presMsg"></p>
       <div class="parents rv" id="parentsBlock"></div>
@@ -123,7 +119,7 @@
     </section>
 
     <!-- =================== 7. CALENDARIO =================== -->
-    <section class="sec cal-sec parch" id="calendario" data-corners aria-label="Calendario del evento">
+    <section class="sec cal-sec parch" id="calendario" data-corners data-torn="tb" aria-label="Calendario del evento">
       <i class="ln a"></i><i class="ln b"></i>
       <div class="scroll rv punch" id="calCard">
         <div class="scroll-paper">
@@ -144,7 +140,7 @@
     </section>
 
     <!-- =================== 8. MENSAJE PRINCIPAL Y DETALLES =================== -->
-    <section class="sec detail parch" id="detalles" data-corners>
+    <section class="sec detail parch" id="detalles" data-corners data-torn="tb">
       <i class="bf"></i>
       <div class="detail-grid">
         <div class="detail-fig rv"><img src="assets/rapunzel.png" alt="Ilustración de Rapunzel"><img class="detail-pascal" src="assets/pascal.png" alt="" aria-hidden="true"></div>
@@ -162,7 +158,7 @@
     </section>
 
     <!-- =================== 9. UBICACIÓN Y VESTUARIO =================== -->
-    <section class="sec info parch" id="ubicacion" data-corners>
+    <section class="sec info parch" id="ubicacion" data-corners data-torn="tb">
       <i class="ln a"></i><i class="ln b"></i><i class="bf"></i>
       <div class="info-block rv">
         <h2 class="banner"><span>Recepción</span></h2>
@@ -174,7 +170,10 @@
       </div>
       <div class="info-block rv">
         <h2 class="banner"><span>Dress Code</span></h2>
-        <div class="dress-ic" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#i-suit"/></svg><svg viewBox="0 0 64 64"><use href="#i-dress"/></svg></div>
+        <div class="dress-ic" aria-hidden="true">
+          <span class="ic-wrap"><span class="ic-suit"></span><i class="sp" style="--w:9px;left:-6px;top:-4px"></i><i class="sp" style="--w:7px;right:-8px;bottom:4px;--d:.7s"></i></span>
+          <span class="ic-wrap"><span class="ic-dress"></span><i class="sp" style="--w:8px;right:-6px;top:-2px;--d:.35s"></i><i class="sp" style="--w:7px;left:-7px;bottom:8px;--d:1s"></i></span>
+        </div>
         <p class="dress-t" data-bind="vestuario.codigo">Vestimenta elegante</p>
         <p class="dress-n" data-bind="vestuario.nota"></p>
         <img class="pascal-foot" src="assets/pascal.png" alt="" aria-hidden="true">
@@ -186,7 +185,7 @@
       <div class="band-photo" style="background-image:url('assets/barco.png')"></div>
       <canvas class="motes" data-kind="warm"></canvas>
     </div>
-    <section class="sec dedic parch" id="dedicatoria" data-corners>
+    <section class="sec dedic parch" id="dedicatoria" data-corners data-torn="tb">
       <i class="ln a"></i><i class="ln b"></i>
       <h2 class="banner rv"><span>Dedicatoria</span></h2>
       <div class="letter rv" id="letter" style="--d:.1s"></div>
@@ -197,7 +196,7 @@
       <div class="band-photo" style="background-image:url('assets/castillo.png')"></div>
       <canvas class="motes" data-kind="gold"></canvas>
     </div>
-    <section class="sec gifts parch" id="regalos" data-corners>
+    <section class="sec gifts parch" id="regalos" data-corners data-torn="tb">
       <i class="ln a"></i><i class="ln b"></i>
       <h2 class="banner rv"><span>Mesa de regalos</span></h2>
       <p class="txt rv" id="giftTxt" style="--d:.1s"></p>
@@ -209,7 +208,7 @@
     </section>
 
     <!-- =================== 12. CONFIRMAR ASISTENCIA =================== -->
-    <section class="sec rsvp parch" id="confirmar" data-corners>
+    <section class="sec rsvp parch" id="confirmar" data-corners data-torn="tb">
       <i class="bf a"></i><i class="bf b"></i>
       <h2 class="banner rv"><span>Confirma tu asistencia</span></h2>
       <p class="msgtxt rv" id="rsvpMsg" style="--d:.1s"></p>
@@ -225,8 +224,7 @@
 
     <!-- =================== 13. CIERRE MÁGICO =================== -->
     <section class="finale" id="cierre" aria-label="Cierre de la invitación">
-      <div class="scene" data-scene="dome" aria-hidden="true"></div>
-      <div data-lanterns="8" data-lantern-small></div>
+      <video class="finale-video" id="finaleVideo" src="assets/despedida.mp4" muted loop autoplay playsinline preload="auto" aria-hidden="true"></video>
       <canvas class="motes" data-kind="night" aria-hidden="true"></canvas>
       <div class="finale-copy">
         <p class="tq rv" id="cierreTitulo">¡Te esperamos!</p>

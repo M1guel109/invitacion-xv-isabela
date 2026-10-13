@@ -79,7 +79,9 @@
   var LANTERN = '<symbol id="lantern" viewBox="0 0 60 90">' +
     '<image href="assets/linterna.png" x="0" y="0" width="60" height="90" preserveAspectRatio="xMidYMid slice"/></symbol>';
   var BUTTERFLY = '<symbol id="butterfly" viewBox="0 0 60 50">' +
-    '<g fill="url(#gGold)" stroke="#9a7424" stroke-width="1"><path d="M30 24 C12 -4 -4 8 10 22 C-2 30 8 46 30 28Z"/><path d="M30 24 C48 -4 64 8 50 22 C62 30 52 46 30 28Z"/></g>' +
+    '<g fill="url(#gGold)" stroke="#9a7424" stroke-width="1">' +
+    '<path class="bf-wing bf-wing-l" d="M30 24 C12 -4 -4 8 10 22 C-2 30 8 46 30 28Z"/>' +
+    '<path class="bf-wing bf-wing-r" d="M30 24 C48 -4 64 8 50 22 C62 30 52 46 30 28Z"/></g>' +
     '<path d="M30 24 C16 12 10 14 12 20 M30 24 C44 12 50 14 48 20" stroke="#9a7424" stroke-width=".8" fill="none"/>' +
     '<ellipse cx="30" cy="27" rx="1.8" ry="9" fill="#7a5a1c"/></symbol>';
   var SPARKLE = '<symbol id="sparkle" viewBox="-12 -12 24 24"><path d="M0 -11 Q1 -1 11 0 Q1 1 0 11 Q-1 1 -11 0 Q-1 -1 0 -11Z" fill="#fff6c8"/></symbol>';
@@ -87,7 +89,15 @@
   var SEAL = '<symbol id="seal" viewBox="-40 -40 80 80"><polygon points="' + starPts(22, 38, 33) + '" fill="#9c7424"/><circle r="31" fill="url(#gSeal)" stroke="#6b4a14" stroke-width="1.5"/><circle r="25" fill="none" stroke="#7a5818" stroke-width="1.4"/>' +
     '<g fill="none" stroke="#7a5818" stroke-width="1.5" stroke-linejoin="round"><polygon points="' + starPts(8, 21, 9) + '" fill="#e9c860" fill-opacity=".7"/></g><circle r="5" fill="#fff4b8" stroke="#7a5818" stroke-width="1.2"/></symbol>';
   var HEART = '<symbol id="heart" viewBox="0 0 32 30"><path d="M16 28C4 18 1 12 1 8 1 3.5 4.5 1 8.5 1 12 1 15 3 16 6 17 3 20 1 23.5 1 27.5 1 31 3.5 31 8 31 12 28 18 16 28Z"/></symbol>';
-  var FLOURISH = '<symbol id="flourish" viewBox="0 0 200 20"><path d="M2 10H84M116 10H198" stroke="#b8923a" stroke-width="1.4"/><path d="M100 2L108 10 100 18 92 10Z" fill="#c8a04a"/><circle cx="88" cy="10" r="2" fill="#c8a04a"/><circle cx="112" cy="10" r="2" fill="#c8a04a"/></symbol>';
+  var FLOURISH = '<symbol id="flourish" viewBox="0 0 200 28" fill="none">' +
+    '<path d="M6 16 C 28 6, 48 24, 72 13 C 78 10, 80 15, 76 17" stroke="url(#gGold)" stroke-width="1.3" stroke-linecap="round"/>' +
+    '<path d="M76 17 C 73 20, 68 18, 70 14 C 71 12, 74 13, 73 15" stroke="url(#gGold)" stroke-width="1.1" stroke-linecap="round"/>' +
+    '<g transform="translate(46 11) rotate(-18) scale(.26)"><path d="M0 0 C10 -15 30 -15 44 0 C30 15 10 15 0 0Z" fill="url(#gLeaf)" stroke="#3b6130" stroke-width="2"/></g>' +
+    '<path d="M194 16 C 172 6, 152 24, 128 13 C 122 10, 120 15, 124 17" stroke="url(#gGold)" stroke-width="1.3" stroke-linecap="round"/>' +
+    '<path d="M124 17 C 127 20, 132 18, 130 14 C 129 12, 126 13, 127 15" stroke="url(#gGold)" stroke-width="1.1" stroke-linecap="round"/>' +
+    '<g transform="translate(154 11) scale(-.26,.26) rotate(-18)"><path d="M0 0 C10 -15 30 -15 44 0 C30 15 10 15 0 0Z" fill="url(#gLeaf)" stroke="#3b6130" stroke-width="2"/></g>' +
+    '<path d="M100 4 Q101 13 110 14 Q101 15 100 24 Q99 15 90 14 Q99 13 100 4Z" fill="url(#gGold)" stroke="#9c7424" stroke-width=".6"/>' +
+    '<circle cx="82" cy="14" r="1.8" fill="#c8a04a"/><circle cx="118" cy="14" r="1.8" fill="#c8a04a"/></symbol>';
   var HAND = '<symbol id="hand" viewBox="0 0 40 48"><path d="M17 4C13.5 4 12 7 12 9.5V27L8 23.5C5.5 21.5 2.5 23.5 4.5 26.5L13 41C15 44.5 18.5 46 22 46H28C34 46 38 41.5 38 35.5V23C38 20 34.5 20 34.5 23V21C34.5 18 30.5 18 30.5 21V19C30.5 16 26.5 16 26.5 19V9.5C26.5 6.5 22 5.5 22 9.5C22 6 19.5 4 17 4Z" fill="#fff" stroke="#3d1f66" stroke-width="2" stroke-linejoin="round"/></symbol>';
 
   /* ---------- Lotos ---------- */
