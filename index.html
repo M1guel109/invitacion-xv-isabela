@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#150a26">
+<title>Mis XV Años Danna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Great+Vibes&family=Pinyon+Script&family=Playfair+Display:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+
+<style>html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- =================== 1. PORTADA CON SOBRE =================== -->
+  <section class="cover" id="cover" aria-label="Portada de la invitación">
+    <div class="cover-paper parch" data-corners>
+      <canvas class="motes" data-kind="soft" aria-hidden="true"></canvas>
+      <!--===================<svg class="crown" viewBox="0 0 220 120" aria-hidden="true"><use href="#crown"/></svg>=================== -->
+      <img class="cover-img" src="assets/corona.png" alt="Imagen de portada de la invitación" aria-hidden="true">
+      <h1 class="title gold" data-bind="titulo">Mis XV Años</h1>
+      <p class="name" data-bind="quinceanera">Isabela</p>
+
+      <button type="button" class="env" id="envBtn" aria-label="Abrir la invitación. Tocar el sobre">
+        <span class="env-wrap">
+          <span class="env-glow"></span>
+          <img class="env-img" src="assets/carta.png" alt="" aria-hidden="true">
+        </span>
+        <span class="hint">Tocar el sobre</span>
+      </button>
+
+      <div class="cover-lotus" aria-hidden="true">
+        <svg viewBox="0 0 120 160">
+          <path d="M60 150C64 120 52 100 62 72" fill="none" stroke="#5f8a4c" stroke-width="4" stroke-linecap="round"/>
+          <g transform="translate(62 128) rotate(-40) scale(1.1)"><use href="#leafg"/></g>
+          <g transform="translate(62 108) rotate(-150) scale(.9)"><use href="#leafg"/></g>
+          <use href="#lotus" x="0" y="12" width="120" height="100"/>
+        </svg>
+      </div>
+    </div>
+    <div class="flash" aria-hidden="true"></div>
+  </section>
+
+  <main id="story" tabindex="-1">
+
+    <!-- =================== 2. ENTRADA AL MUNDO FANTÁSTICO =================== -->
+    <section class="hero" id="hero" data-torn="b" aria-label="Entrada al mundo fantástico">
+      <video class="hero-video" id="heroVideo" src="assets/hero.mp4" poster="assets/hero.jpg"
+             muted loop playsinline preload="auto" aria-hidden="true"></video>
+
+      <canvas class="motes" data-kind="gold" aria-hidden="true"></canvas>
+      <a class="scroll-cue" href="#reproductor">Desliza<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 5l5 5 5-5"/></svg></a>
+      <div class="hero-mist" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <!-- =================== <svg class="crown" viewBox="0 0 220 120" aria-hidden="true"><use href="#crown"/></svg>=================== -->
+        <img class="cover-img" src="assets/corona.png" style="width:300px; height: 180px;" alt="Imagen de portada de la invitación" aria-hidden="true">
+
+        <h2 class="title gold" data-bind="titulo">Mis XV Años</h2>
+        <p class="name" data-bind="quinceanera">Isabela</p>
+      </div>
+    </section>
+
+    <!-- =================== 3-4. REPRODUCTOR Y CUENTA REGRESIVA =================== -->
+    <section class="sec player parch" id="reproductor" data-corners aria-label="Música y cuenta regresiva">
+      <div class="player-card rv" id="playerCard">
+        <div class="wave" id="wave" aria-hidden="true"></div>
+        <input type="range" class="seek" id="seek" min="0" max="100" step="0.1" value="0" aria-label="Progreso de la música" disabled>
+        <div class="ctrls">
+          <button type="button" class="ctl prev" id="prevBtn" aria-label="Retroceder 10 segundos" disabled>
+            <svg viewBox="0 0 28 20" aria-hidden="true"><path d="M14 0 0 10l14 10V0zm14 0L14 10l14 10V0z"/></svg>
+          </button>
+          <button type="button" class="heart" id="heartBtn" aria-pressed="false" aria-label="Presiona el corazón: reproduce la música y muestra el mensaje de invitación">
+            <svg class="h" viewBox="0 0 32 30" aria-hidden="true"><use href="#heart"/></svg>
+            <svg class="hand" id="hand" viewBox="0 0 40 48" aria-hidden="true"><use href="#hand"/></svg>
+          </button>
+          <button type="button" class="ctl next" id="nextBtn" aria-label="Avanzar 10 segundos" disabled>
+            <svg viewBox="0 0 28 20" aria-hidden="true"><path d="M14 0 0 10l14 10V0zm14 0L14 10l14 10V0z"/></svg>
+          </button>
+        </div>
+        <p class="plabel">Presiona el corazón</p>
+        <p class="pstatus" id="pstatus" role="status"></p>
+        <div class="heart-msg" id="heartMsg" hidden><p data-bind="mensajeCorazon"></p></div>
+      </div>
+
+      <div class="countdown rv" id="countdown" style="--d:.1s">
+        <i class="ln a"></i><i class="ln b"></i>
+        <p class="cd-eyebrow">Tan solo faltan</p>
+        <div class="cd" id="cdGrid" role="timer" aria-label="Cuenta regresiva hacia la fiesta">
+          <div class="cd-c"><span class="cd-n" id="cdD">--</span><span class="cd-l">Días</span></div><span class="cd-sep" aria-hidden="true">:</span>
+          <div class="cd-c"><span class="cd-n" id="cdH">--</span><span class="cd-l">Horas</span></div><span class="cd-sep" aria-hidden="true">:</span>
+          <div class="cd-c"><span class="cd-n" id="cdM">--</span><span class="cd-l">Minutos</span></div><span class="cd-sep" aria-hidden="true">:</span>
+          <div class="cd-c"><span class="cd-n" id="cdS">--</span><span class="cd-l">Segundos</span></div>
+        </div>
+        <div class="cd-past" id="cdPast" hidden>
+          <p class="cd-past-t" id="cdPastT">¡El gran día ya llegó!</p>
+          <p class="cd-past-s" id="cdPastS"></p>
+        </div>
+        <img class="pascal-foot" src="assets/pascal.png" alt="" aria-hidden="true">
+      </div>
+    </section>
+
+    <!-- =================== 5. MENSAJE DE INVITACIÓN =================== -->
+    <section class="sec msg parch" id="invitacion" data-corners>
+      <i class="ln a"></i><i class="ln b"></i><i class="bf"></i>
+      <svg class="sun rv" viewBox="0 0 100 100" aria-hidden="true"><use href="#sunstar"/></svg>
+      <p class="lead rv" id="invMsg" style="--d:.1s"></p>
+      <svg class="flourish rv" viewBox="0 0 200 20" aria-hidden="true" style="--d:.2s"><use href="#flourish"/></svg>
+    </section>
+
+    <!-- =================== 6. PRESENTACIÓN DE LA QUINCEAÑERA =================== -->
+    <section class="sec wreath-sec parch" id="presentacion" data-corners>
+      <i class="ln a"></i><i class="ln b"></i>
+      <div class="wreath rv punch" id="wreath">
+        <img class="wreath-img" src="assets/corona_nombre.png" alt="">
+        <p class="name" data-bind="quinceanera">Danna</p>
+      </div>
+      <p class="pres rv" id="presMsg"></p>
+      <div class="parents rv" id="parentsBlock"></div>
+      <div class="parents rv" id="godBlock" hidden></div>
+    </section>
+
+    <!-- =================== 7. CALENDARIO =================== -->
+    <section class="sec cal-sec parch" id="calendario" data-corners aria-label="Calendario del evento">
+      <i class="ln a"></i><i class="ln b"></i>
+      <div class="scroll rv punch" id="calCard">
+        <div class="scroll-paper">
+          <div class="cal-head">
+            <i class="sp" style="left:14%;top:6px;--w:14px"></i><i class="sp" style="right:12%;top:26px;--w:20px;--d:.8s"></i><i class="sp" style="left:26%;top:70px;--w:10px;--d:1.4s"></i><i class="sp" style="right:26%;top:96px;--w:12px;--d:2s"></i>
+            <span class="cal-month" id="calMonth">Junio</span>
+            <span class="cal-year" id="calYear">2026</span>
+            <svg class="cal-sil" viewBox="0 0 200 380" aria-hidden="true"><use href="#princessF"/></svg>
+          </div>
+          <div class="cal-grid" id="calGrid" role="grid" aria-label="Días del mes"></div>
+          <div class="cal-foot">
+            <div class="cal-day"><b id="calDow">Domingo</b><span id="calNum">14.06.2026</span></div>
+            <div class="vl" aria-hidden="true"></div>
+            <div class="cal-time"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-clock"/></svg><span id="calTime">5:45 P.M.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== 8. MENSAJE PRINCIPAL Y DETALLES =================== -->
+    <section class="sec detail parch" id="detalles" data-corners>
+      <i class="bf"></i>
+      <div class="detail-grid">
+        <div class="detail-fig rv"><img src="assets/rapunzel.png" alt="Ilustración de Rapunzel"><img class="detail-pascal" src="assets/pascal.png" alt="" aria-hidden="true"></div>
+        <div class="detail-copy rv" style="--d:.15s">
+          <svg class="sun" viewBox="0 0 100 100" aria-hidden="true"><use href="#sunstar"/></svg>
+          <p class="big" id="mainMsg"></p>
+          <p class="name" data-bind="quinceanera" style="font-size:2.6rem">Danna</p>
+        </div>
+      </div>
+      <ul class="facts rv">
+        <li><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-cal"/></svg><div><small>Fecha</small><span id="factFecha"></span></div></li>
+        <li><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-clock"/></svg><div><small>Hora</small><span id="factHora"></span></div></li>
+        <li><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-pin"/></svg><div><small>Lugar</small><span data-bind="evento.lugar.nombre">Nombre del lugar</span></div></li>
+      </ul>
+    </section>
+
+    <!-- =================== 9. UBICACIÓN Y VESTUARIO =================== -->
+    <section class="sec info parch" id="ubicacion" data-corners>
+      <i class="ln a"></i><i class="ln b"></i><i class="bf"></i>
+      <div class="info-block rv">
+        <h2 class="banner"><span>Recepción</span></h2>
+        <svg class="big-ic" viewBox="0 0 120 110" aria-hidden="true"><use href="#castle"/></svg>
+        <p class="venue" data-bind="evento.lugar.nombre">Nombre del lugar</p>
+        <p class="addr" data-bind="evento.lugar.direccion">Dirección completa del evento</p>
+        <a class="gold-btn" id="mapBtn">Cómo llegar</a>
+        <p class="note" id="mapNote" hidden>La ubicación estará disponible próximamente.</p>
+      </div>
+      <div class="info-block rv">
+        <h2 class="banner"><span>Dress Code</span></h2>
+        <div class="dress-ic" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#i-suit"/></svg><svg viewBox="0 0 64 64"><use href="#i-dress"/></svg></div>
+        <p class="dress-t" data-bind="vestuario.codigo">Vestimenta elegante</p>
+        <p class="dress-n" data-bind="vestuario.nota"></p>
+        <img class="pascal-foot" src="assets/pascal.png" alt="" aria-hidden="true">
+      </div>
+    </section>
+
+    <!-- =================== 10. MENSAJE PERSONAL =================== -->
+    <div class="band rv-band" data-torn="tb" aria-hidden="true">
+      <div class="band-photo" style="background-image:url('assets/barco.png')"></div>
+      <canvas class="motes" data-kind="warm"></canvas>
+    </div>
+    <section class="sec dedic parch" id="dedicatoria" data-corners>
+      <i class="ln a"></i><i class="ln b"></i>
+      <h2 class="banner rv"><span>Dedicatoria</span></h2>
+      <div class="letter rv" id="letter" style="--d:.1s"></div>
+    </section>
+
+    <!-- =================== 11. MESA DE REGALOS =================== -->
+    <div class="band" data-torn="tb" aria-hidden="true">
+      <div class="band-photo" style="background-image:url('assets/castillo.png')"></div>
+      <canvas class="motes" data-kind="gold"></canvas>
+    </div>
+    <section class="sec gifts parch" id="regalos" data-corners>
+      <i class="ln a"></i><i class="ln b"></i>
+      <h2 class="banner rv"><span>Mesa de regalos</span></h2>
+      <p class="txt rv" id="giftTxt" style="--d:.1s"></p>
+      <div class="gift-grid rv" style="--d:.15s">
+        <a class="gift" data-gift="fisico"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-gift"/></svg><b></b><small></small></a>
+        <a class="gift" data-gift="sobre"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-money"/></svg><b></b><small></small></a>
+      </div>
+      <p class="note gift-note" id="giftNote" role="status"></p>
+    </section>
+
+    <!-- =================== 12. CONFIRMAR ASISTENCIA =================== -->
+    <section class="sec rsvp parch" id="confirmar" data-corners>
+      <i class="bf a"></i><i class="bf b"></i>
+      <h2 class="banner rv"><span>Confirma tu asistencia</span></h2>
+      <p class="msgtxt rv" id="rsvpMsg" style="--d:.1s"></p>
+      <form class="rsvp-form rv" id="rsvpForm" novalidate style="--d:.15s">
+        <div class="field"><label for="rsvpName">Tu nombre</label><input id="rsvpName" name="nombre" type="text" autocomplete="name" placeholder="Nombre y apellido" maxlength="80" required></div>
+        <div class="field" id="guestsField"><label for="rsvpGuests">Número de asistentes</label><select id="rsvpGuests" name="asistentes"></select></div>
+        <input class="hp" type="text" name="_gotcha" id="rsvpHp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="gold-btn punch" id="rsvpBtn">Confirmar</button>
+        <p class="status" id="rsvpStatus" role="status" aria-live="polite"></p>
+      </form>
+      <img class="pascal-foot" src="assets/pascal.png" alt="" aria-hidden="true">
+    </section>
+
+    <!-- =================== 13. CIERRE MÁGICO =================== -->
+    <section class="finale" id="cierre" aria-label="Cierre de la invitación">
+      <div class="scene" data-scene="dome" aria-hidden="true"></div>
+      <div data-lanterns="8" data-lantern-small></div>
+      <canvas class="motes" data-kind="night" aria-hidden="true"></canvas>
+      <div class="finale-copy">
+        <p class="tq rv" id="cierreTitulo">¡Te esperamos!</p>
+        <p class="who rv" data-bind="quinceanera" style="--d:.1s">Danna</p>
+        <p class="inv rv" id="cierreTexto" style="--d:.2s"></p>
+      </div>
+    </section>
+    <footer class="foot"><span data-bind="titulo">Mis XV Años</span> · <span data-bind="quinceanera">Danna</span></footer>
+  </main>
+</div>
+
+<script src="config.js"></script>
+<script src="art.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

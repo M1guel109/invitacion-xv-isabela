@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"/c/Users/SheiderDev/AppData/Local/Temp/claude/\" 2>&1 | head -20)",
+      "Read(//c/Users/SheiderDev/AppData/Local/Temp/claude//**)",
+      "Bash(ls -la \"/c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna/\" 2>&1)",
+      "Read(//c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna//**)",
+      "Bash(ls -la \"/c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna/68654c2b-5be7-40d0-91e6-f4777d9b5ca6/\" 2>&1)",
+      "Read(//c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna/68654c2b-5be7-40d0-91e6-f4777d9b5ca6//**)",
+      "Bash(mkdir -p \"/c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna/68654c2b-5be7-40d0-91e6-f4777d9b5ca6/scratchpad\")",
+      "Read(//c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna/68654c2b-5be7-40d0-91e6-f4777d9b5ca6/**)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(echo \"exit:$?\")",
+      "Read(//c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna/68654c2b-5be7-40d0-91e6-f4777d9b5ca6/scratchpad/**)",
+      "Bash(node --experimental-vm-modules /c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna/68654c2b-5be7-40d0-91e6-f4777d9b5ca6/scratchpad/verify.js)",
+      "Bash(node /c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna/68654c2b-5be7-40d0-91e6-f4777d9b5ca6/scratchpad/verify.js)",
+      "Bash(pkill -f \"http-server\\\\|node -e\")",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //F //PID 26028)",
+      "Bash(command -v ffprobe)",
+      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 \"assets/hero1.mp4\")",
+      "Bash(node -e ' *)",
+      "Bash(curl -s -o /dev/null -w \"index: %{http_code}\\\\n\" http://localhost:8123/)",
+      "Bash(curl -s -o /dev/null -w \"hero1.mp4: %{http_code}\\\\n\" http://localhost:8123/assets/hero1.mp4)",
+      "Bash(node \"/c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna/68654c2b-5be7-40d0-91e6-f4777d9b5ca6/scratchpad/dims.js\")",
+      "Bash(node \"/c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna/68654c2b-5be7-40d0-91e6-f4777d9b5ca6/scratchpad/verify2.js\")",
+      "Bash(taskkill //F //PID 28076)",
+      "Bash(node \"/c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna/68654c2b-5be7-40d0-91e6-f4777d9b5ca6/scratchpad/verify.js\")",
+      "Bash(taskkill //F //PID 20556)",
+      "Bash(curl -s -o /dev/null -w \"barco.png: %{http_code}\\\\n\" http://localhost:8123/assets/barco.png)",
+      "Bash(node \"/c/Users/SheiderDev/AppData/Local/Temp/claude/c--Users-SheiderDev-Desktop-Invitacion-XV-invitacion-xv-danna/68654c2b-5be7-40d0-91e6-f4777d9b5ca6/scratchpad/verify_band.js\")"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+Pon aquí tu archivo de música (por ejemplo musica.mp3) y escribe su ruta en config.js:
+  musica: { archivo: "assets/musica.mp3", ... }
+Usa un MP3 liviano (menos de 5 MB) y con derechos de uso para tu evento.
