@@ -191,6 +191,10 @@
     status('La música aún no está configurada.');
   }
 
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden && audioOK && !audio.paused) audio.pause();
+  });
+
   function burst() {
     if (reduce) return;
     for (var i = 0; i < 9; i++) {
@@ -228,7 +232,19 @@
     if (opened) return; opened = true;
     cover.classList.add('is-opening');
     var hv = $('#heroVideo');
-    if (hv && !reduce) { var pv = hv.play(); if (pv && pv.catch) pv.catch(function () { }); }
+    if (hv && !reduce) {
+      var pv = hv.play(); if (pv && pv.catch) pv.catch(function () { });
+      hv.addEventListener('timeupdate', function () {
+        var d = hv.duration;
+        if (!d || !isFinite(d)) return;
+        var fw = Math.min(.9, d * .18), t = hv.currentTime, f = 1;
+        if (t < fw) f = t / fw;
+        else if (t > d - fw) f = (d - t) / fw;
+        f = Math.max(0, Math.min(1, f));
+        hv.style.opacity = (.2 + f * .8).toFixed(2);
+        hv.style.filter = 'blur(' + ((1 - f) * 10).toFixed(1) + 'px)';
+      });
+    }
     envBtn.setAttribute('aria-disabled', 'true');
     if (audioOK && C.musica.iniciarAlAbrirSobre) { var p = audio.play(); if (p && p.catch) p.catch(function () { }); }
     setTimeout(finish, reduce ? 300 : 2450);
@@ -341,7 +357,9 @@
         var ctl = new AbortController(), to = setTimeout(function () { ctl.abort(); }, 15000);
         fetch(cfg.endpoint, {
           method: 'POST', signal: ctl.signal,
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          headers: /script\.google\.com/.test(cfg.endpoint)
+            ? { 'Content-Type': 'text/plain;charset=utf-8' }
+            : { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({ nombre: nombre, asistentes: asistentes, evento: (C.titulo || '') + ' ' + (C.quinceanera || ''), enviado: new Date().toISOString() })
         }).then(function (r) {
           if (!r.ok) throw new Error('http ' + r.status);

@@ -24,7 +24,7 @@ window.INVITACION = {
   // --- Familia -------------------------------------------------------------
   padres: {
     encabezado: "Con la bendición y el amor de mis padres",
-    nombres: ["Nombre del padre", "Nombre de la madre"]   // pendiente
+    nombres: ["Jeysson Gonzáles", "Yeny Paola Rey"]
   },
   padrinos: {
     encabezado: "Mis padrinos",
@@ -57,9 +57,8 @@ window.INVITACION = {
   // --- Mesa de regalos -----------------------------------------------------
   // Si "url" está vacía, la tarjeta muestra "disponible próximamente".
   regalos: {
-    texto: "En esta noche mágica, tu compañía es el mejor regalo. Pero si deseas añadir una chispa más de luz con un detalle o una lluvia de sobres, lo guardaré con gratitud en mi corazón.",
-    fisico: { etiqueta: "Regalo", url: "", detalle: "" },
-    sobre:  { etiqueta: "Lluvia de sobres", url: "", detalle: "" }
+    texto: "En esta noche mágica, tu compañía es el mejor regalo. Pero si deseas añadir una chispa más de luz con una lluvia de sobres, lo guardaré con gratitud en mi corazón.",
+    sobre: { etiqueta: "Lluvia de sobres", url: "", detalle: "" }
   },
 
   // --- Confirmación de asistencia -------------------------------------------

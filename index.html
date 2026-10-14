@@ -19,6 +19,7 @@
   <section class="cover" id="cover" aria-label="Portada de la invitación">
     <div class="cover-paper parch" data-corners>
       <canvas class="motes" data-kind="soft" aria-hidden="true"></canvas>
+      <img class="cover-frame" src="assets/portada.png" alt="" aria-hidden="true">
       <!--===================<svg class="crown" viewBox="0 0 220 120" aria-hidden="true"><use href="#crown"/></svg>=================== -->
       <img class="cover-img" src="assets/corona.png" alt="Imagen de portada de la invitación" aria-hidden="true">
       <h1 class="title gold" data-bind="titulo">Mis XV Años</h1>
@@ -39,8 +40,8 @@
   <main id="story" tabindex="-1">
 
     <!-- =================== 2. ENTRADA AL MUNDO FANTÁSTICO =================== -->
-    <section class="hero" id="hero" data-torn="b" aria-label="Entrada al mundo fantástico">
-      <video class="hero-video" id="heroVideo" src="assets/hero.mp4" poster="assets/hero.jpg"
+    <section class="hero" id="hero" aria-label="Entrada al mundo fantástico">
+      <video class="hero-video" id="heroVideo" src="assets/hero-1.mp4" poster="assets/hero.jpg"
              muted loop playsinline preload="auto" aria-hidden="true"></video>
 
       <canvas class="motes" data-kind="gold" aria-hidden="true"></canvas>
@@ -56,7 +57,7 @@
     </section>
 
     <!-- =================== 3-4. REPRODUCTOR Y CUENTA REGRESIVA =================== -->
-    <section class="sec player parch" id="reproductor" data-corners data-torn="tb" aria-label="Música y cuenta regresiva">
+    <section class="sec player parch" id="reproductor" data-corners data-torn="b" aria-label="Música y cuenta regresiva">
       <div class="player-card rv" id="playerCard">
         <div class="wave" id="wave" aria-hidden="true"></div>
         <input type="range" class="seek" id="seek" min="0" max="100" step="0.1" value="0" aria-label="Progreso de la música" disabled>
@@ -102,8 +103,8 @@
       <svg class="flourish rv" viewBox="0 0 200 20" aria-hidden="true" style="--d:.2s"><use href="#flourish"/></svg>
     </section>
 
-    <!-- =================== 6. PRESENTACIÓN DE LA QUINCEAÑERA =================== -->
-    <section class="sec wreath-sec parch" id="presentacion" data-corners data-torn="tb">
+    <!-- =================== 6-7. PRESENTACIÓN DE LA QUINCEAÑERA Y CALENDARIO =================== -->
+    <section class="sec wreath-sec cal-sec parch" id="presentacion" data-corners data-torn="tb" aria-label="Presentación y calendario del evento">
       <i class="ln a"></i><i class="ln b"></i>
       <div class="wreath rv punch" id="wreath">
         <img class="wreath-img" src="assets/corona_nombre.png" alt="">
@@ -116,18 +117,14 @@
       <p class="pres rv" id="presMsg"></p>
       <div class="parents rv" id="parentsBlock"></div>
       <div class="parents rv" id="godBlock" hidden></div>
-    </section>
 
-    <!-- =================== 7. CALENDARIO =================== -->
-    <section class="sec cal-sec parch" id="calendario" data-corners data-torn="tb" aria-label="Calendario del evento">
-      <i class="ln a"></i><i class="ln b"></i>
       <div class="scroll rv punch" id="calCard">
         <div class="scroll-paper">
           <div class="cal-head">
-            <i class="sp" style="left:14%;top:6px;--w:14px"></i><i class="sp" style="right:12%;top:26px;--w:20px;--d:.8s"></i><i class="sp" style="left:26%;top:70px;--w:10px;--d:1.4s"></i><i class="sp" style="right:26%;top:96px;--w:12px;--d:2s"></i>
+            <i class="sp" style="left:14%;top:6px;--w:14px"></i><i class="sp" style="right:12%;top:26px;--w:20px;--d:.8s"></i><i class="sp" style="left:26%;top:70px;--w:10px;--d:1.4s"></i><i class="sp" style="right:26%;top:96px;--w:12px;--d:2s"></i><i class="sp" style="left:32%;top:48px;--w:9px;--d:.5s"></i><i class="sp" style="right:30%;top:58px;--w:8px;--d:1.8s"></i>
             <span class="cal-month" id="calMonth">Junio</span>
             <span class="cal-year" id="calYear">2026</span>
-            <svg class="cal-sil" viewBox="0 0 200 380" aria-hidden="true"><use href="#princessF"/></svg>
+            <img class="cal-sil" src="assets/princesa.png" alt="">
           </div>
           <div class="cal-grid" id="calGrid" role="grid" aria-label="Días del mes"></div>
           <div class="cal-foot">
@@ -201,7 +198,6 @@
       <h2 class="banner rv"><span>Mesa de regalos</span></h2>
       <p class="txt rv" id="giftTxt" style="--d:.1s"></p>
       <div class="gift-grid rv" style="--d:.15s">
-        <a class="gift" data-gift="fisico"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-gift"/></svg><b></b><small></small></a>
         <a class="gift" data-gift="sobre"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-money"/></svg><b></b><small></small></a>
       </div>
       <p class="note gift-note" id="giftNote" role="status"></p>
