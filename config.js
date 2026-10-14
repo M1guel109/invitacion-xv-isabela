@@ -68,7 +68,7 @@ window.INVITACION = {
     maxAsistentes: 6,
     // OPCIÓN A (recomendada): servicio de formularios que reciba un POST JSON.
     //   Ej. Formspree: "https://formspree.io/f/xxxxxxx"
-    endpoint: "",
+    endpoint: "https://script.google.com/macros/s/AKfycbzsuUu_G3WD36jg_Hx8UScJgnNb3OJeWhUmCb2yjhsNWmCsyUF8QJtwYjH-dJRydX0/exec",
     // OPCIÓN B: abre WhatsApp con el mensaje listo. Número con código de país, sin + ni espacios.
     //   Ej. Colombia: "573001234567". Solo se usa si "endpoint" está vacío.
     whatsapp: ""
