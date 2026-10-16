@@ -24,7 +24,7 @@ window.INVITACION = {
   // --- Familia -------------------------------------------------------------
   padres: {
     encabezado: "Con la bendición y el amor de mis padres",
-    nombres: ["Jeysson Gonzáles", "Yeny Paola Rey"]
+    nombres: ["Jeysson González", "Yeny Paola Rey"]
   },
   padrinos: {
     encabezado: "Mis padrinos",
